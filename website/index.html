@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Toby's Portfolio</title>
+        <link rel = "stylesheet" href = "style.css"/>
+        <link rel = "stylesheet" href = "mediaqueries.css"/>
+    </head>
+    <body>
+        <nav id = "desktop-nav">
+            <div class="links">
+                <div class = "logo"><a href = "https://www.linkedin.com/in/tobymitchell02/" target="_blank">linkedin - tobymitchell02</a></div>
+                <div class = "logo"><a href = "https://github.com/tubs02" target="_blank">github - tubs02</a></div>
+            </div>
+            <ul class = "desktop-nav-list">
+                <li><a href = "#about">About me</a></li>
+                <li><a href = "#projects">Projects</a></li>
+                <li><a href = "#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <nav id = "dropdown-nav">
+            <div class="links">
+                <div class = "logo"><a href = "https://www.linkedin.com/in/tobymitchell02/" target="_blank">linkedin.com/in/tobymitchell02</a></div>
+                <div class = "logo"><a href = "https://github.com/tubs02" target="_blank">github.com/tubs02</a></div>
+            </div>
+            <div class = "dropdown-nav-menu">
+                <div class = "dropdown-nav-icon" onclick = "toggleMenu()">
+                    <span></span><span></span><span></span>
+                </div>
+                <ul class = "dropdown-nav-list">
+                    <li><a href = "#about" onclick = "toggleMenu()">About me</a></li>
+                    <li><a href = "#projects" onclick = "toggleMenu()">Projects</a></li>
+                    <li><a href = "#contact" onclick = "toggleMenu()">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section id = "hero">
+            <div class = "greeting">
+                <div class = "greeting-subtext">
+                    <p>Hello! my name is</p>
+                </div>
+                <div class = "greeting-name" onclick = "location.href = '#about'">Toby Mitchell</div>
+                <div class = "greeting-subtext">
+                    <p>Software Engineer</p>
+                </div>
+            </div>
+            <div class="hero-body">
+                <p>This website is a showcase of my programming work.</p>
+                <p>It is in its early stages!</p>
+                <p>Thank you for visiting.</p>
+            </div>
+        </section>
+        <section id = "about">
+            <div class = "section-title" onclick = "toTop()"><span>About me</span></div>
+            <div class = "section-body">
+                <div class="about-me-text">
+                    <p>I am currently studying for my BSc Software Engineering degree at Liverpool John Moores University. I am in my second year.</p>
+                    <p>In my spare time, I am spending a lot of time learning new languages and frameworks.
+                       I am currently interested in programming an MLP in Java, the code for which can be found in the Projects section.</p>
+                    <p>Apart from programming, I have a great deal of passion for music, as I am a violinist. I am a very motivated person and I pride myself in my ability to learn.</p>
+                    <p>I am currently looking for a placement year with a software company before my final year at university. I would love an opportunity to get some industry experience.</p>
+                    <p><a>You can read my cv here.</a></p>
+                </div>
+            </div>
+        </section>
+        <section id = "projects">
+            <div class = "section-title" onclick = "toTop()"><span>Projects</span></div>
+            <div class = "section-body">
+                <div class = project-grid>
+                    <div class = "project-container">
+                        <div class="project-title">Simple Conway's Game of Life</div>
+                        <canvas class = "game-of-life-canvas"></canvas>
+                        <script src = "projects/game-of-life/gol.js"></script>
+                        <div class="project-subtitle">Just for fun.<br>Drag your mouse, this is interactive!</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id = "contact">
+            <div class = "section-title" onclick = "toTop()"><span>Contact</span></div>
+            <div class = "section-body">
+                <ul class = "contact-list">
+                    <div class = "contact-container">
+                        <li class="greeting-subtext">toby.mit02@gmail.com</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src = "script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,339 @@
+
+/* -- PORTFOLIO MAIN CSS -- */
+
+/* -- FONTS -- */
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+/* -- MAIN -- */
+
+* {
+    margin: 0;
+    padding: 0;
+    cursor: default;
+}
+
+body {
+    font-family: 'Inconsolata';
+    font-weight: 300;
+    background-color:rgb(20, 20, 20);
+    color: aliceblue;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 15vh;
+}
+
+/* -- DESKTOP NAVBAR -- */
+
+nav, .desktop-nav-list {
+    display: flex;
+    gap: 2rem;
+}
+
+.desktop-nav-list {
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a {
+    font-weight: 100;
+    transition: all 400ms ease-in-out;
+    color:cornflowerblue;
+    text-decoration: none;
+    text-decoration-color: transparent;
+}
+
+a:hover {
+    color:aliceblue;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+    text-decoration-color:cornflowerblue;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.logo {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 100;
+    cursor: default;
+    line-height: 2.5rem;
+    transition: all 400ms ease-in-out;
+}
+
+.logo:hover {
+    font-weight: 1000;
+    color:cornflowerblue;
+}
+
+/* -- DROPDOWN NAVBAR -- */
+
+#dropdown-nav {
+    display: none;
+}
+
+.dropdown-nav-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-nav-icon {
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor:pointer;
+}
+
+.dropdown-nav-icon span {
+    width:100%;
+    height: 2px;
+    background-color: cornflowerblue;
+    transition: all 800ms ease-in-out;
+}
+
+.dropdown-nav-list {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgb(20, 20, 20);
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 400ms ease-in-out;
+}
+
+.dropdown-nav-list a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: aliceblue;
+    text-decoration: none;
+    transition: all 400ms ease-in-out;
+}
+
+.dropdown-nav-list a:hover {
+    color:rgb(20, 20, 20);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.dropdown-nav-list li {
+    list-style: none;
+    transition: all 400ms ease-in-out;
+}
+
+.dropdown-nav-list li:hover {
+    background-color: cornflowerblue;
+    cursor: pointer;
+}
+
+.dropdown-nav-list.open {
+    max-height: 300px;
+    transition: all 400ms ease-in-out;
+}
+
+.dropdown-nav-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.dropdown-nav-icon.open span:nth-child(2) {
+    opacity: 0;
+    transform: translate(-500px);
+}
+
+.dropdown-nav-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.dropdown-nav-icon span:first-child {
+    transform: none;
+}
+
+.dropdown-nav-icon span:nth-child(2) {
+    opacity: 1;
+}
+
+.dropdown-nav-icon span:last-child {
+    transform: none;
+}
+
+#hero {
+    height: 85vh;
+}
+
+.greeting {
+    justify-content: center;
+    align-items: center;
+}
+
+.greeting-name {
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 100;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+}
+
+
+.greeting-name:hover {
+    font-weight: 1000;
+    color:cornflowerblue;
+}
+
+.greeting-subtext {
+    color: cornflowerblue;
+    margin: 1rem;
+    text-align: center;
+}
+
+.hero-body {
+    margin: 5rem;
+    margin-left: 20vh;
+    margin-right: 20vh;
+    text-align: center;
+    align-items: center;
+}
+
+.hero-body p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 2rem;
+}
+
+.section-title {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 100;
+    cursor: pointer;
+    transition: opacity 400ms ease-in-out, transform 400ms ease-in-out;
+}
+
+.section-title span {
+    transition: opacity 400ms ease-in-out;
+    display: inline-block;
+    opacity: 1;
+}
+
+.section-title:hover span {
+    opacity: 0;
+}
+
+.section-title::before {
+    content: "Return to top";
+    font-weight: 1000;
+    color: cornflowerblue;
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 400ms ease-in-out, visibility 400ms ease-in-out;
+    z-index: 0;
+}
+
+.section-title:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.section-body {
+    height: 85vh;
+}
+
+.project-grid {
+    display: grid;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    border: solid cornflowerblue;
+    border-radius: 2px;
+    overflow: hidden;
+    transition: all 400ms ease-in-out;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-container:hover {
+    border: solid aliceblue;
+    transform: scale(1.05);
+    transition: all 400ms ease-in-out;
+}
+
+.project-title {
+    text-align: center;
+    margin: 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.project-subtitle {
+    text-align: center;
+    margin: 1rem;
+    color: cornflowerblue;
+    transition: all 400ms ease-in-out;
+}
+
+.project-container:hover .project-subtitle {
+    color: aliceblue;
+}
+
+.game-of-life-canvas {
+    accent-color: cornflowerblue; /* Alive */
+    background-color: rgb(20, 20, 20);; /* Dead */
+    border: solid cornflowerblue;
+    border-radius: 2px;
+    transition: all 400ms ease-in-out;
+}
+
+.project-container:hover .game-of-life-canvas {
+    border: solid aliceblue;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.contact-list {
+    list-style: none;
+}
+
+.about-me-text {
+    margin: 5rem;
+    margin-left: 20vh;
+    margin-right: 20vh;
+    text-align: justify;
+    align-items: center;
+}
+
+.about-me-text p {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 2rem;
+    transition: all 400ms ease-in-out;
+}
+
+.about-me-text p:hover {
+    transform: scale(1.02);
+}
