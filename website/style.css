@@ -337,3 +337,11 @@ a:hover {
 .about-me-text p:hover {
     transform: scale(1.02);
 }
+
+.project-subtext {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 2rem;
+    text-align: center;
+}
